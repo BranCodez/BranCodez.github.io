@@ -6,8 +6,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./projects/css/firstwebsite.css"/>
   <style>
-*,
+    *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -62,6 +63,9 @@ button {
   justify-content: flex-end;
 }
 
+.header__bars {
+  display: none;
+}
 
 /* hero section */
 .hero {
@@ -91,6 +95,7 @@ button {
 
 .pricing__container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -131,6 +136,7 @@ button {
   color: #FFF;
   padding: 2rem;
   border-radius: 20px;
+  min-width: 400px;
   flex: 1;
 }
 
@@ -229,6 +235,7 @@ button {
   width: 90%;
   margin-inline: auto;
 }
+
  /* media queries */
 @media (max-width: 714px) {
   /* header section */
@@ -283,6 +290,8 @@ button {
   margin: 1.5rem auto;
   }
 }
+
+
 @media (max-width: 480px) {
   .header {
     justify-content: space-between;
@@ -361,8 +370,10 @@ button {
   margin: 1.2rem auto;
  }
 }
+
+    
   </style>
-    <title>First Website Project</title>
+  <title>First Website Project</title>
 </head>
 <body>
   <header class="header container">
