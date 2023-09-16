@@ -6,12 +6,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./projects/css/firstwebsite.css"/>
-  <style>
-    *,
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<style 
+  *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --glow-color: hsl(186 100% 69%);
 }
 
 * {
@@ -22,6 +28,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('/images/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 button {
@@ -42,6 +53,7 @@ button {
   font-size: 1.5rem;
   text-transform: uppercase;
   flex: 1;
+  color: #F8F8FF;
 }
 
 .header__menu {
@@ -53,7 +65,7 @@ button {
 
 .header__link {
   text-decoration: none;
-  color: #000;
+  color: #F8F8FF;
 }
 
 .header__btn-container {
@@ -79,18 +91,22 @@ button {
   letter-spacing: -0.05em;
   max-width: 25ch;
   margin-inline: auto;
+  color: #F8F8FF;
 }
 
 .hero__description {
   font-size: 1.2rem;
   max-width: 60ch;
   margin: 2rem auto;
+  color: #F8F8FF;
+  opacity: 0.8;
 }
 
 /* pricing */
 
 .pricing {
   margin-top: 10rem;
+  color: #F8F8FF;
 }
 
 .pricing__container {
@@ -162,12 +178,15 @@ button {
   font-size: 2.25rem;
   letter-spacing: -0.05em;
   line-height: 1;
+  color: #F8F8FF;
 }
 
 .features__description {
   font-size: 1.2rem;
   margin: 1rem auto;
   max-width: 45ch;
+  color: #F8F8FF;
+  opacity: 0.8;
 }
 
 .features__container {
@@ -178,18 +197,21 @@ button {
 }
 
 .features__box {
-  border: 1px solid #ccc;
   padding: 2rem;
   border-radius: 10px;
   width: 500px;
+  background-color: #000;
 }
 
 .features__box-title {
   line-height: 1;
+  color: #F8F8FF;
 }
 
 .features__box-description {
   margin-top: 1rem;
+  color: #F8F8FF;
+  opacity: 0.9;
 }
 
 /* contact */
@@ -201,12 +223,15 @@ button {
   font-size: 2.25rem;
   letter-spacing: -0.05em;
   line-height: 1;
+  color: #F8F8FF;
 }
 
 .contact__description {
   max-width: 60ch;
   margin: 1rem auto;
   font-size: 1.2rem;
+  color: #F8F8FF;
+  opacity: 0.8;
 }
 
 /* footer */
@@ -219,6 +244,7 @@ button {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.1em;
+  color: #F8F8FF;
 }
 
 /* utility class */
@@ -236,7 +262,204 @@ button {
   margin-inline: auto;
 }
 
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 1em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
  /* media queries */
+
+ @media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
 @media (max-width: 714px) {
   /* header section */
   .header__title {
@@ -309,6 +532,7 @@ button {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
+    color: #F8F8FF;
   }
 
   .header__title {
@@ -370,9 +594,7 @@ button {
   margin: 1.2rem auto;
  }
 }
-
-    
-  </style>
+</style>
   <title>First Website Project</title>
 </head>
 <body>
@@ -384,8 +606,8 @@ button {
       <a class="header__link" href="#contact">Contact</a>
     </nav>
     <div class="header__btn-container">
-      <button class="btn header__btn">Login</button>
-      <button class="btn header__btn">Enter App</button>
+      <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
+      <button class='glowing-btn'><span class='glowing-txt'>ENT<span class='faulty-letter'>ER</span>APP</span></button>
     </div>
     <button class="header__bars">
       <svg xmlns="http://www.w3.org/2000/svg" 
@@ -404,7 +626,7 @@ button {
     <p class="hero__description">
       Most players are diamond, but can learn more. We make that simple for you, you'll never have to grind diamond again.
     </p>
-    <a href="#features" class="btn hero__btn">Learn more</a>
+    <button class='glowing-btn'><span class='glowing-txt'>LEA<span class='faulty-letter'>RN</span>MORE</span></button>
   </section>
   <section class="pricing container">
     <h2 class="pricing__title">Simple Transparent Pricing</h2>
@@ -502,12 +724,7 @@ button {
       into Rocket League or need some tips, my inbox is always open  and
       i'll do my best to get to you as soon as possible.
     </p>
-    <a 
-    class="btn"
-    href="mailto:branden.orefice@gmail.com" 
-    target="_blank" 
-    rel="noopener noreferrer">
-    Reach Out</a>
+    <button class='glowing-btn'><span class='glowing-txt'>REA<span class='faulty-letter'>CH</span>OUT</span></button>
   </section>
   <footer class="footer container">
     <h2 class="footer__title">BranCodez</h2>
