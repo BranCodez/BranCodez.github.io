@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./projects/css/firstwebsite.css"/>
+  <title>First Website Project</title>
+</head>
+<body>
+  <header class="header container">
+    <h2 class="header__title">BranCodez</h2>
+    <nav class="header__menu">
+      <a class="header__link" href="#pricing">Pricing</a>
+      <a class="header__link" href="#features">Features</a>
+      <a class="header__link" href="#contact">Contact</a>
+    </nav>
+    <div class="header__btn-container">
+      <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
+      <button class='glowing-btn'><span class='glowing-txt'>ENT<span class='faulty-letter'>ER</span>APP</span></button>
+    </div>
+    <button class="header__bars">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke-width="1.5" 
+      stroke="currentColor">
+      <path stroke-linecap="round" 
+      stroke-linejoin="round" 
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    </button>
+  </header>
+  <section class="hero container">
+    <h1 class="hero__title">Rocket league made simple for beginners</h1>
+    <p class="hero__description">
+      Most players are diamond, but can learn more. We make that simple for you, you'll never have to grind diamond again.
+    </p>
+    <button class='glowing-btn'><span class='glowing-txt'>LEA<span class='faulty-letter'>RN</span>MORE</span></button>
+  </section>
+  <section class="pricing container">
+    <h2 class="pricing__title">Simple Transparent Pricing</h2>
+    <p class="pricing__description">It doesn't matter what skill level you have, our coaching will work well for you.</p>
+    <div class="pricing__container">
+      <div class="pricing__box">
+        <h3 class="pricing__price">10$</h3>
+        <h4 class="pricing__plan">Starter</h4>
+        <p class="pricing__description">Good for anyone looking for some help
+        </p>
+        <button class="pricing__btn">Get started</button>
+        <ul class="pricing__features">
+          <li>Ariel dribbles plus ground dribbles</li>
+          <li>How to fake your movement like a pro</li>
+          <li>Never miss a shot training packs</li>
+          <li>Goalie pack that won't dissapoint</li>
+          <li>Next level speed flip training pointers</li>
+        </ul>
+      </div>
+      <div class="pricing__box">
+        <h3 class="pricing__price">25$</h3>
+        <h4 class="pricing__plan">Champ</h4>
+        <p class="pricing__description">Perfect for players who want to take it to the next level</p>
+        <button class="pricing__btn">Get started</button>
+        <ul class="pricing__features">
+          <li>How to not be a bad teammate</li>
+          <li>Best rotation training pack</li>
+          <li>Live one on one training in game</li>
+          <li>How to be polite to opponents</li>
+          <li>Most useful chat commands to use</li>
+          <li>The best octane car design for sweats</li>
+          <li>Training packs with good value</li>
+        </ul>
+      </div>
+      <div class="pricing__box">
+        <h3 class="pricing__price">40$</h3>
+        <h4 class="pricing__plan">GC Stack</h4>
+        <p class="pricing__description">Everything you need and then some for that big rank</p>
+        <button class="pricing__btn">Get started</button>
+        <ul class="pricing__features">
+          <li>Ceiling shots to make panties drop</li>
+          <li>How to create a montage</li>
+          <li>Best chat commands to get banned</li>
+          <li>How to yell at your teammates</li>
+          <li>Ways to never be a grand champ</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="features container">
+    <h2 class="features__title">Everything you need to get multiple
+      wins</h2>
+      <p class="features__description">Well everything you need if you aren't picky about 
+        about how you win.
+      </p>
+      <div class="features__container">
+      <div class="features__box">
+        <h3 class="features__box-title">Movement</h3>
+        <p class="features__box-description">Don't be that
+          guy who can't be at full boost consistantly, send it
+          with max beans
+        </p>
+      </div>
+      <div class="features__box">
+        <h3 class="features__box-title">Power Shots</h3>
+        <p class="features__box-description">Boom the ball at max
+          velocity into the net everytime, with litte to no 
+          effort
+        </p>
+      </div>
+      <div class="features__box">
+        <h3 class="features__box-title">BIG dribbles</h3>
+        <p class="features__box-description">Become a god at 
+          dribbling and make your opponent wish they left the 
+          match
+        </p>
+      </div>
+      <div class="features__box">
+        <h3 class="features__box-title">Passing</h3>
+        <p class="features__box-description">Easily be the 
+          teammate that gets a invite when immediately log-in
+        </p>
+      </div>
+      <div class="features__box">
+        <h3 class="features__box-title">Resets</h3>
+        <p class="features__box-description">Recording a montage of 
+          clips is one thing, but you can be the montage with resets
+        </p>
+      </div>
+      </div>
+  </section>
+  <section class="contact container">
+    <h2 class="contact__title">Reach out</h2>
+    <p class="contact__description">Whether you're just getting
+      into Rocket League or need some tips, my inbox is always open  and
+      i'll do my best to get to you as soon as possible.
+    </p>
+    <button class='glowing-btn'><span class='glowing-txt'>REA<span class='faulty-letter'>CH</span>OUT</span></button>
+  </section>
+  <footer class="footer container">
+    <h2 class="footer__title">BranCodez</h2>
+  </footer> 
+</body>
+</html>
